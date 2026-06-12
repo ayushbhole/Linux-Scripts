@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+    echo "Usage: $0 <directory_path>"
+    exit 1
+fi
+
+dir=$1
+
+if [ ! -d "$dir" ]
+then
+    echo "Directory does not exist"
+    exit 1
+fi
+
+files=$(find "$dir" -type f | wc -l)
+folders=$(find "$dir" -type d | wc -l)
+
+echo "Total Files   : $files"
+echo "Total Folders : $folders"
