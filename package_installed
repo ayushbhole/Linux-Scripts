@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -p "Enter the Package Name : " name
+
+var1=$(rpm -q $name)
+
+if [ "$var1" != "" ] &> /dev/null
+then
+        echo "The package is installed : $var1"
+        rpm -qi $name | grep "Install Date"
+else
+        echo "Installing the Package"
+        sudo yum install -y $name
+fi
