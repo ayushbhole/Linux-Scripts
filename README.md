@@ -1,8 +1,4 @@
 # Linux-Scripts
-
-Linux Scripts Collection
-## Scripts
-
 A collection of Linux administration and automation scripts.
 
 ## Scripts Included
