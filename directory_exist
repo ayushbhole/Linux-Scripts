@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Enter Directory Name : " name
+
+ls -ld $name 2>/dev/null
+
+if [ $? -eq 0 ]
+then
+        echo "Directory is Present : "
+        ls -ld $name
+else
+        echo "directory is not present"
+fi
